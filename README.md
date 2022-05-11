@@ -1,4 +1,4 @@
-# System76 Scheduler Integration
+# KWin Script for system76-scheduler Integration
 
 [System76 Scheduler](https://github.com/pop-os/system76-scheduler) is a service which optimizes Linux's CPU scheduler and automatically assigns process priorities for improved desktop responsiveness.
 
