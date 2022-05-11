@@ -77,5 +77,5 @@ systemctl --user enable --now com.system76.Scheduler.dbusproxy.service
 1. Install and configure [System76 Scheduler](https://github.com/pop-os/system76-scheduler).
 2. Install this KWin script.
 3. Activate the script at System Settings &rarr; Window Management &rarr; KWin Scripts (or run `kcmshell5 kwinscripts`).
-4. Optionally run the D-Bus proxy script as described above.
+4. Run the dedicated D-Bus proxy as described above.
 5. Process priority (_niceness_) of focused apps should interactively update (e.g. check the `NICE` column in `System Activity`, `htop`, or any other process manager).
