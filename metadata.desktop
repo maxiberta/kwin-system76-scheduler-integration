@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=System76 Scheduler Integration
+Comment=Notify System76 Scheduler which app has focus so it can be prioritized
+Icon=pop-os
+
+X-KDE-PluginInfo-Author=Maximiliano Bertacchini
+X-KDE-PluginInfo-Email=maxiberta@gmail.com
+X-KDE-PluginInfo-Name=kwin-system76-scheduler-integration
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-License=MIT
+
+Type=Service
+X-KDE-ServiceTypes=KWin/Script
+X-Plasma-API=javascript
+X-Plasma-MainScript=code/main.js
