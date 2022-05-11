@@ -11,7 +11,7 @@ This can be worked around by proxying these specific messages from the _service 
 
 # Installation
 
-This KWin Script is published at the [KDE Store](https://store.kde.org/browse/cat/210/) and can be downloaded and installed via "Get New Scripts" at the Window Management &rarr; KWin Scripts settings.
+This KWin Script is [published at the KDE Store](https://store.kde.org/p/1789957) and can be downloaded and installed via "Get New Scripts" at the Window Management &rarr; KWin Scripts settings.
 
 ## Manual Installation
 
