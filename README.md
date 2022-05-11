@@ -27,7 +27,7 @@ or if updating:
 kpackagetool5 --type=KWin/Script -u .
 ```
 
-## D-Bus Workaround (forward messages from the session bus to the system bus)
+## D-Bus Workaround (forward messages from session bus to the system bus)
 
 Save the following script as `/usr/local/bin/system76-scheduler-dbus-proxy.sh` (or anywhere else):
 
