@@ -31,7 +31,7 @@ kpackagetool5 --type=KWin/Script -u .
 
 Save the following script as `/usr/local/bin/system76-scheduler-dbus-proxy.sh` (or anywhere else):
 
-```
+```sh
 #!/bin/bash
 SERVICE="com.system76.Scheduler"
 PATH="/com/system76/Scheduler"
@@ -54,7 +54,7 @@ chmod +x /usr/local/bin/system76-scheduler-dbus-proxy.sh
 This script can be run manually; or can be installed as a systemd user service so that it runs automatically on login.
 For example, save the following service definition as `~/.config/systemd/user/com.system76.Scheduler.dbusproxy.service`:
 
-```
+```systemd
 [Unit]
 Description=Forward com.system76.Scheduler session DBus messages to the system bus
 
