@@ -6,7 +6,7 @@ This KWin Script interactively notifies [System76 Scheduler](https://github.com/
 
 # Limitations
 
-The `system76-scheduler` service is published on the _D-Bus systemwide bus_; but [KWin Scripts](https://develop.kde.org/docs/extend/plasma/kwin/api/#functions) can only call D-Bus methods on the _user session bus_ (as far as I can tell).
+The `system76-scheduler` service is published on the _systemwide D-Bus bus_; but [KWin Scripts](https://develop.kde.org/docs/extend/plasma/kwin/api/#functions) can only call D-Bus methods on the _user session bus_ (as far as I can tell).
 This can be worked around by proxying these specific messages from the _service bus_ to the _system bus_. See the installation instructions below.
 
 # Installation
