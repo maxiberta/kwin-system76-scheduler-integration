@@ -16,7 +16,7 @@ This KWin Script is [published at the KDE Store](https://store.kde.org/p/1789957
 ## Manual Installation
 
 ```sh
-git clone https://github.com/kwin-scripts/kwin-system76-scheduler-integration.git
+git clone https://github.com/maxiberta/kwin-system76-scheduler-integration.git
 cd kwin-system76-scheduler-integration
 kpackagetool5 --type=KWin/Script -i .
 ```
