@@ -33,15 +33,15 @@ Save the following script as `/usr/local/bin/system76-scheduler-dbus-proxy.sh` (
 
 ```sh
 #!/bin/bash
-SERVICE="com.system76.Scheduler"
-PATH="/com/system76/Scheduler"
-INTERFACE="com.system76.Scheduler"
-METHOD="SetForegroundProcess"
-/usr/bin/dbus-monitor "destination=$SERVICE,path=$PATH,interface=$INTERFACE,member=$METHOD" | 
+DBUS_SERVICE="com.system76.Scheduler"
+DBUS_PATH="/com/system76/Scheduler"
+DBUS_INTERFACE="com.system76.Scheduler"
+DBUS_METHOD="SetForegroundProcess"
+dbus-monitor "destination=$DBUS_SERVICE,path=$DBUS_PATH,interface=$DBUS_INTERFACE,member=$DBUS_METHOD" | 
   while true; do 
     read method call time sender _ dest serial path interface member
     read type pid
-    [ "$member" = "member=$METHOD" ] && /usr/bin/qdbus --system $SERVICE $PATH $INTERFACE.$METHOD $pid
+    [ "$member" = "member=$DBUS_METHOD" ] && qdbus --system $DBUS_SERVICE $DBUS_PATH $DBUS_INTERFACE.$DBUS_METHOD $pid
   done
 ```
 
