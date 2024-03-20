@@ -18,7 +18,7 @@ This KWin Script is [published at the KDE Store](https://store.kde.org/p/1789957
 ```sh
 git clone https://github.com/maxiberta/kwin-system76-scheduler-integration.git
 cd kwin-system76-scheduler-integration
-kpackagetool5 --type=KWin/Script -i .
+kpackagetool6 --type KWin/Script -i .
 ```
 
 or if updating:
@@ -29,23 +29,7 @@ kpackagetool5 --type=KWin/Script -u .
 
 ## D-Bus Workaround (forward messages from session bus to the system bus)
 
-Save the following script as `/usr/local/bin/system76-scheduler-dbus-proxy.sh` (or anywhere else):
-
-```sh
-#!/bin/bash
-DBUS_SERVICE="com.system76.Scheduler"
-DBUS_PATH="/com/system76/Scheduler"
-DBUS_INTERFACE="com.system76.Scheduler"
-DBUS_METHOD="SetForegroundProcess"
-dbus-monitor "destination=$DBUS_SERVICE,path=$DBUS_PATH,interface=$DBUS_INTERFACE,member=$DBUS_METHOD" | 
-  while true; do 
-    read method call time sender _ dest serial path interface member
-    read type pid
-    [ "$member" = "member=$DBUS_METHOD" ] && qdbus --system $DBUS_SERVICE $DBUS_PATH $DBUS_INTERFACE.$DBUS_METHOD $pid
-  done
-```
-
-and make it executable:
+Save [this script](system76-scheduler-dbus-proxy.sh) as `~/.local/bin/system76-scheduler-dbus-proxy.sh` (or anywhere else), and make it executable:
 
 ```sh
 chmod +x /usr/local/bin/system76-scheduler-dbus-proxy.sh
