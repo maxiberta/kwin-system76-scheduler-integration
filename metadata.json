@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "maxiberta@gmail.com",
+                "Name": "Maximiliano Bertacchini"
+            }
+        ],
+        "Description": "Notify System76 Scheduler which app has focus so it can be prioritized",
+        "Icon": "pop-os",
+        "Id": "kwin-system76-scheduler-integration",
+        "License": "MIT",
+        "Name": "System76 Scheduler Integration",
+        "ServiceTypes": [
+            "KWin/Script"
+        ],
+        "Version": "0.1"
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js"
+}
