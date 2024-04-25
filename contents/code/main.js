@@ -2,5 +2,7 @@
 
 workspace.windowActivated.connect(function(client) {
     //console.log("CLIENT PID", client.pid);
-    callDBus("com.system76.Scheduler", "/com/system76/Scheduler", "com.system76.Scheduler", "SetForegroundProcess", client.pid);
+    if (client != null) {
+        callDBus("com.system76.Scheduler", "/com/system76/Scheduler", "com.system76.Scheduler", "SetForegroundProcess", client.pid);
+    }
 })
