@@ -35,7 +35,8 @@ Save [this script](system76-scheduler-dbus-proxy.sh) as `~/.local/bin/system76-s
 chmod +x ~/.local/bin/system76-scheduler-dbus-proxy.sh
 ```
 
-This script can be run manually; or can be installed as a systemd user service so that it runs automatically on login.
+You may also need to change `qdbus` in the script to the name of qdbus binary on your machine (it can be `qdbus6` or `qdbus-qt6`).
+The script can be run manually; or can be installed as a systemd user service so that it runs automatically on login.
 For example, save the following service definition as `~/.config/systemd/user/com.system76.Scheduler.dbusproxy.service`:
 
 ```systemd
